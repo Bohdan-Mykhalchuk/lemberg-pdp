@@ -64,3 +64,5 @@
 /drush
 /drupal.phar
 /drupal
+
+.idea/
