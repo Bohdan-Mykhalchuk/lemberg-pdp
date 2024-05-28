@@ -82,6 +82,9 @@ jobs:
         if: steps.composer-cache.outputs.cache-hit != 'true'
         run: composer install $COMPOSER_FLAGS
 
+      - name: 'test drush'
+        run: ./vendor/bin/drush status
+
       - name: 'Clear Drupal cache'
         run: ./vendor/bin/drush cr
 
