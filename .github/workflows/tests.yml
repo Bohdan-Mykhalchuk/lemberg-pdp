@@ -83,10 +83,10 @@ jobs:
         run: composer install $COMPOSER_FLAGS
 
       - name: 'test drush'
-        run: ./vendor/bin/drush status
+        run: /var/www/drupal/vendor/bin/drush status
 
       - name: 'Clear Drupal cache'
-        run: ./vendor/bin/drush cr
+        run: /var/www/drupal/vendor/bin/drush cr
 
 #      - name: 'PHPStan Analyse'
 #        run: vendor/bin/phpstan analyse --configuration=phpstan.neon
