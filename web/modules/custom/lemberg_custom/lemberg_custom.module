@@ -14,11 +14,5 @@ function lemberg_custom_hook_info() {
       'group' => 'coffee',
     ],
   ];
-
   return $hooks;
-
-
-
 }
-
-
