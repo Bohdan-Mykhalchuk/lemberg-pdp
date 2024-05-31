@@ -11,17 +11,17 @@ env:
   CODECOV_TOKEN: ${{ secrets.ci_codecov_token }}
 
 jobs:
-  phpcs:
-    name: 'PHPCS'
-    runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        php-version:
-          - '8.3'
-    steps:
-      - name: 'Checkout'
-        uses: 'actions/checkout@v2'
-
+#  phpcs:
+#    name: 'PHPCS'
+#    runs-on: ubuntu-20.04
+#    strategy:
+#      matrix:
+#        php-version:
+#          - '8.3'
+#    steps:
+#      - name: 'Checkout'
+#        uses: 'actions/checkout@v2'
+#
 #      - name: 'Install PHP'
 #        uses: 'shivammathur/setup-php@v2'
 #        with:
@@ -44,9 +44,9 @@ jobs:
 #      - name: 'Install Composer dependencies'
 #        if: steps.composer-cache.outputs.cache-hit != 'true'
 #        run: composer install $COMPOSER_FLAGS
-
-      - name: 'PHPCS Analyse'
-        run: vendor/bin/phpcs
+#
+#      - name: 'PHPCS Analyse'
+#        run: vendor/bin/phpcs
 
   phpstan:
     name: 'PHPStan (beta)'
@@ -65,6 +65,9 @@ jobs:
 
       - name: 'PHPStan Analyse'
         run: vendor/bin/phpstan analyse --configuration=phpstan.neon
+
+      - name: 'PHPCS Analyse'
+        run: vendor/bin/phpcs
 
 #  phpunit:
 #    name: 'PHPUnit'
