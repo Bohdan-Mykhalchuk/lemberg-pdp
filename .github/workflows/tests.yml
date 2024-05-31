@@ -67,7 +67,7 @@ jobs:
         run: vendor/bin/phpstan analyse --configuration=phpstan.neon
 
       - name: 'PHPCS Analyse'
-        run: vendor/bin/phpcs
+        run: vendor/bin/phpcs --version
 
 #  phpunit:
 #    name: 'PHPUnit'
