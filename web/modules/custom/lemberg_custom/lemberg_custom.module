@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Coffee primary module file.
+ */
+
+/**
+ * Implements hook_hook_info().
+ */
+function lemberg_custom_hook_info() {
+  $hooks = [
+    'coffee_commands' => [
+      'group' => 'coffee',
+    ],
+  ];
+  return $hooks;
+}
