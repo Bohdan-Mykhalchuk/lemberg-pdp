@@ -22,7 +22,8 @@
         "drupal/core-project-message": "^10.2",
         "drupal/core-recommended": "^10.2",
         "drupal/token": "^1.14",
-        "drush/drush": "^12.5"
+        "drush/drush": "^12.5",
+        "weitzman/drupal-test-traits": "^2.3"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -102,6 +103,7 @@
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
         "drupal/coder": "^8.3",
+        "drupal/core-dev": "^10.2",
         "mglaman/phpstan-drupal": "^1.2",
         "phpro/grumphp": "^2.5",
         "phpro/grumphp-shim": "^2.5",
